@@ -1,0 +1,179 @@
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+    #slider {
+        height: 406px;
+    }
+
+    .content__wrapper {
+        max-width: calc(100vw - 40px);
+    }
+}
+
+@media (max-width: 46.1875em) {
+    #slider {
+        height: 274px;
+    }
+
+    .content__wrapper {
+        max-width: calc(100vw - 20px);
+    }
+
+    .about__wrap {
+        display: block;
+    }
+
+    .about__member {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .member-img {
+        height: 430px;
+        overflow-y: hidden;
+        text-align: center;
+    }
+
+    .member-img img {
+        width: 60%;
+    }
+
+    .about__member .member-name {
+        margin: 30px 0 16px;
+    }
+
+    .about__member:first-child .member-name {
+        margin: 10px 0 16px;
+    }
+
+    .book-tickets {
+        display: block;
+        margin: 30px 0 0;
+    }
+
+    .book-ticket {
+        padding: 0;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .tour__img {
+        height: 358px;
+    }
+
+    .tour-detail {
+        height: 172px;
+    }
+
+    .tour-detail .button {
+        position: initial;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .contact__wrap {
+        display: block;
+    }
+
+    .contact-right {
+        margin-top: 30px;
+    }
+
+    .contact-info input {
+        margin: 0 0 10px;
+        width: 100%;
+    }
+
+    .input-msg {
+        margin: 0;
+    }
+
+    .modal-close {
+        width: auto;
+    }
+
+    .contact-right .button {
+        height: 50px;
+    }
+
+    .header__search {
+        display: none;
+    }
+
+    .header__list {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .nav-respon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60px;
+        height: 50px;
+        z-index: 3;
+    }
+
+    .header__item:first-child > .header__link {
+        display: inline-block;
+    }
+
+    .header__item:first-child > .header__link:hover {
+        background: #000;
+        color: white;
+    }
+
+    .sublist {
+        position: initial;
+        background: rgb(46, 46, 46);
+    }
+
+    .sublist li a {
+        color: white;
+        padding: 12px 40px;
+    }
+}
+
+@media (max-width: 26.25em) {
+    #slider {
+        height: 198px;
+    }
+
+    .content__wrapper {
+        padding: 52px 0;
+    }
+
+    .member-img {
+        height: 306px;
+    }
+
+    .tour__img {
+        height: 296px;
+    }
+
+    .tour-detail {
+        height: 194px;
+    }
+}
+
+@media (max-width: 18.125em) {
+    #slider {
+        height: 144px;
+    }
+
+    .member-img {
+        height: 214px;
+    }
+
+    .tour-detail {
+        height: auto;
+    }
+}
+
+@media (min-width: 64em) and (max-width: 80em) {
+    #slider {
+        height: 538px;
+    }
+}

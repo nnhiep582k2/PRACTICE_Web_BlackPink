@@ -1,0 +1,515 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+#main {
+    font-size: 1.6rem;
+}
+
+#main *::selection {
+    background: rgb(246, 164, 178);
+}
+
+/* Header */
+#header {
+    background: #000;
+    width: 100%;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.header__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+}
+
+.header__item {
+    position: relative;
+}
+
+.header__item > .header__link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    display: block;
+    line-height: var(--header-height);
+    padding: 0 20px;
+}
+
+.header__item > .header__link:hover {
+    background: #ccc;
+    color: black;
+    transition: 0.2s;
+}
+
+.header__item > .header__link i {
+    font-size: 1.5rem;
+    margin-left: 2px;
+}
+
+.sublist {
+    position: absolute;
+    list-style: none;
+    background: white;
+    box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.3);
+    display: none;
+    top: var(--header-height);
+    left: 0;
+    min-width: 200px;
+}
+
+.sublist li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.8rem;
+    display: block;
+    padding: 12px 32px 12px 20px;
+}
+
+.sublist li a:hover {
+    color: black;
+    background: #ccc;
+}
+
+.header__item:last-child:hover .sublist {
+    display: block;
+}
+
+.header__search {
+    color: white;
+    font-size: 1.6rem;
+    height: 100%;
+    line-height: var(--header-height);
+    width: var(--header-height);
+    text-align: center;
+}
+
+.header__search:hover {
+    cursor: pointer;
+    background: red;
+    color: white;
+}
+
+/* Slider */
+#slider {
+    margin-top: var(--header-height);
+    height: 747px;
+    overflow: hidden;
+}
+
+#slider figure {
+    position: relative;
+    width: 500%;
+    left: 0;
+    animation: 20s slider infinite;
+}
+
+#slider img {
+    width: 20%;
+    object-fit: cover;
+    float: left;
+}
+
+@keyframes slider {
+    0% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    95% {
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
+}
+
+/* Content */
+#about p {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.about__wrap {
+    margin-top: 44px;
+    display: flex;
+}
+
+.about__member {
+    max-width: 25%;
+    margin: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.about__member .member-name {
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.member-img {
+    width: 100%;
+    height: 200px;
+}
+
+.member-img img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+#tour {
+    background: #000;
+    color: white;
+}
+
+.tour__sold {
+    background: white;
+    text-align: left;
+    margin-top: 32px;
+}
+
+.tour-month {
+    border-bottom: 1px solid #ccc;
+    color: rgb(78, 78, 78);
+    padding: 10px 18px;
+    position: relative;
+}
+
+.ticket-status {
+    color: white;
+    background: rgb(240, 63, 63);
+    padding: 2px 6px;
+    margin-left: 16px;
+    user-select: none;
+}
+
+.tour-month.november {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rest-ticket {
+    text-align: right;
+    background: #000;
+    color: white;
+    padding: 2px 9px;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.book-tickets {
+    display: flex;
+    margin: 30px -8px 0;
+}
+
+.book-ticket {
+    width: 33.33333%;
+    padding: 0 8px;
+}
+
+.tour__img {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.tour__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tour__img img:hover {
+    opacity: 0.7;
+}
+
+.tour-detail {
+    background: white;
+    color: black;
+    padding: 10px 16px 16px;
+    height: 212px;
+    position: relative;
+}
+
+.tour-detail h3 {
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.tour-detail p:nth-child(2) {
+    color: rgb(121, 121, 121);
+    margin-bottom: 16px;
+}
+
+.tour-detail p:nth-child(3) {
+    font-size: 1.5rem;
+}
+
+.tour-detail .button {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+}
+
+.contact-left {
+    font-size: 1.8rem;
+}
+
+.contact-left i {
+    margin-right: 10px;
+    font-size: 1.6rem;
+}
+
+.contact__wrap {
+    margin-top: 38px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-info input:first-child {
+    margin-right: 10px;
+}
+
+.contact-right input {
+    padding: 12px;
+    font-size: 1.4rem;
+    border: 1px solid #ccc;
+}
+
+.mail-wrap a::before {
+    content: attr(href);
+}
+
+.input-msg {
+    margin-top: 6px;
+    width: 100%;
+}
+
+.contact-right .button {
+    margin-left: auto;
+    display: block;
+}
+
+#map {
+    background: #000;
+    color: white;
+}
+
+#map iframe {
+    width: 100%;
+    height: 500px;
+}
+
+/* Footer */
+#footer {
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    background: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: rgb(97, 97, 97);
+}
+
+#footer i {
+    font-size: 2.6rem;
+    margin: 0 2px;
+}
+
+#footer i:hover {
+    color: rgb(129, 129, 129);
+}
+
+#footer a {
+    text-decoration: none;
+    color: rgb(97, 97, 97);
+}
+
+.connect {
+    margin-bottom: 22px;
+}
+
+.copyright a {
+    text-decoration: underline!important;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 5;
+    display: none;
+}
+
+.modal-container {
+    background: white;
+    position: absolute;
+    top: 9vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    max-width: calc(100% - 30px);
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
+    animation: fade-in 0.3s ease-out;
+}
+
+@keyframes fade-in {
+    from { 
+        opacity: 0.2;
+        transform: translate(-50%, -180px);
+    }
+    to { 
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+.modal-header {
+    text-align: center;
+    background: #009688;
+    color: white;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    padding: 40px 0;
+}
+
+.modal-main label {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.modal-main label i {
+    font-size: 1.4rem;
+}
+
+.modal-header i {
+    font-size: 2.6rem;
+    margin-right: 6px;
+}
+
+.modal-main {
+    padding: 16px;
+    font-size: 1.6rem;
+}
+
+.modal-container input {
+    display: block;
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 9px 10px;
+    border: 1px solid #ccc;
+}
+
+.label2 {
+    margin: 16px 0;
+}
+
+.modal-container button {
+    margin-top: 16px;
+    background: #009688;
+    color: #fff;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 60px;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+}
+
+.modal-container footer {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-close {
+    background: rgb(240, 63, 63);
+    color: white;
+    padding: 10px 16px;
+    font-size: 1.6rem;
+}
+
+.modal-close i {
+    margin-left: 6px;
+}
+
+.modal-help {
+    font-size: 1.6rem;
+}
+
+.modal-help a {
+    color: rgb(0, 110, 255);
+}
+
+.close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    padding: 14px 16px;
+}
+
+.close-btn:hover {
+    background: #ccc;
+    color: black;
+    cursor: pointer;
+}
+
+/* Respon */
+.nav-respon {
+    color: white;
+    font-size: 1.6rem;
+    height: 100%;
+    line-height: var(--header-height);
+    text-align: center;
+    display: none;
+}
+
+.nav-respon:hover {
+    cursor: pointer;
+    background: #ccc;
+    color: black;
+}
